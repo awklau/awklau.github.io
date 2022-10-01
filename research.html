@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Solid State by HTML5 UP</title>
+		<title>Research highlights</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -42,41 +42,81 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Generic</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+								<h2>Research Highlights</h2>
 							</div>
 						</header>
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
+									<h3 class="major">The Ultra-Fast Astronomy Project: </br> Single Photon Imager for Nanosecond Astrophysics (SPINA)</h3>
+									<p>In the Ultra-Fast Astronomy (UFA) program lead by Prof. George F. Smoot, we aim to survey the optical night sky on millisecond and shorter time scales, where we expect to see transients or variabilities from astronomical targets. </p>
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
-
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-
+									<p>We designed a position sensitive silicon photomultiplier (PS-SiPM) based single photon imager, which we call the Single Photon Imager for Nanaosecond Astrophysics (SPINA). When an photon is detected on the PS-SiPM, a photo-electron is generated and amplified into a electric pulse, which is then distributed into the four anodes of the sensor. The readout system on the SPINA system will capture their pulse height, and interpret them as a time series of position, pulse strength with 8ns timing accuracy. We can then interpret this data stream of photon into Ultra-Fast light curve of astronomical objects. </p>
+									<p> I designed and developed the electronic system, cooling system and mechanical mounting of the SPINA system as my Ph.D. thesis project.</p>
+									<img src="images/SPINA_internal.jpg" alt="The SPINA system at work" width="800">
+									<h3 class="major">PS-SiPM Readout electronic system</h3>
+									<p>Reading the high-speed analog pulse from the PS-SiPM detector is one of the challenge in the SPINA system, especially when we wanted to do it simple, cost efficient and on a single electronic board. 
+									</p>
+									<p>	
+										After some testing and experiments, we found commercial Analog Front-End (AFE) developed for medical ultrasound act as a good readout for SiPM system. 
+										The AFE5818 from Texa Instrument can support 16 channels readout with 54dB, Low-noise amplification, in-chip tunable filters and 14bits, 65Msps ADC readout. 
+									</p>
+									<p>
+										We designed our readout system based on the AFE5818 and a Field Programmable Gate Array Multipurpose System on ChIP (FPGA-MPSoC). 
+										This readout system sucessfully capture the signal from our PS-SiPM, and perform realtime processing to decode the position information of each event. 
+										The readout system also generate bias voltage to drive the PS-SiPM with individual channel tunabing ability.
+									</p>
+									<img src="images/readout_board.png" alt="readout PCB of the SPINA system">
+									<h3 class="major">Observatory Visit</h3>
+									<p>We installed the SPINA system on the Nazarbayev University Transient Telescope at the Assy-Turgen Astrophysical Observatory (NUTTelA-TAO) for the first On-Sky testing at Jul 2022. Here is a timelapse video of us installing and testing the SPINA system. </p>
+									<video width="810" height="540" autoplay muted>
+										<source src="images/observatory_timelapse.mp4" type="video/mp4">
+									</video>
 								</div>
 							</div>
+					</section>
 
+					<section id="one" class="wrapper spotlight alt style2">
+						<div class="inner">
+							<div class="content">
+								<h2 class="major">MKIDs readout system development</h2>
+								I also participated in designing and programming readout systems for MKIDs in the Energetic Cosmo Laboratory (ECL). </p><p>
+								Currently, we are testing a few different systems, including the ROACH2 board from minicom electronics, </br> and designing a readout system base on I/Q modulator-demodulator and a FPGA board with GHz ADC/DACs. 
+							</div>
+						</div>
+					</section>
+
+					<section id="two" class="wrapper spotlight style1">
+						<div class="inner">
+							<div class="content">
+								<h2 class="major">Publication highlights</h2>
+								<a href = "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12191/121910Y/Development-of-position-sensitive-photon-counting-imager-for-Ultra-Fast/10.1117/12.2628864.short"><p><b>Lau, A. W. K.</b>, Chan, Y. Y., Shafiee, M., Smoot, G. F., & Grossan, B. (2022). <i>Development of position-sensitive photon-counting imager for Ultra-Fast Astronomy</i>, In X-Ray, Optical, and Infrared Detectors for Astronomy X (Vol. 12191, pp. 312-329). SPIE.</p></a>
+								<a href = "https://www.spiedigitallibrary.org/journals/Journal-of-Astronomical-Telescopes-Instruments-and-Systems/volume-6/issue-4/046002/On-sky-silicon-photomultiplier-detector-performance-measurements-for-millisecond-to/10.1117/1.JATIS.6.4.046002.short"><p><b>Lau, A. W. K.</b>, Shafiee, M., Smoot, G. F., Grossan, B., & Zhanat M.(2020). <i>On-sky silicon photomultiplier detector performance measurements for millisecond to sub-microsecond optical source variability studies</i> Journal of Astronomical Telescopes, Instruments, and Systems 6.4 (2020): 046002</p></a>
+								<h3 class="major">Recent Presentation</h3>
+								<a href = "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12191/121910Y/Development-of-position-sensitive-photon-counting-imager-for-Ultra-Fast/10.1117/12.2628864.short"><p>Oral Presentation: <b>Development of position-sensitive photon-counting imager for Ultra-Fast Astronomy</b>,</br> In SPIE Astronomical Telescopes + Instrumentation 2022: X-Ray, Optical, and Infrared Detectors for Astronomy X</p></a>
+								<h3 class="major"></h3>
+								<a href="https://scholar.google.com/citations?hl=zh-TW&user=hddv02QAAAAJ" class="special">Google Scholar Profile</a>
+							</div>
+						</div>
+					</section>
+
+					<section id="three" class="wrapper alt style1">
+						<div class="inner">
+							<h2 class="major">Past Projects</h2>
+							<section class="features">
+								<article>
+									<a class="image"><img src="images/mic.jpg" alt="" /></a>
+									<h3 class="major">2D Luminescence Microscopic Imaging System development</h3>
+									<p>I joined Prof. KS Wong's laboratory for my final year project in undergraduate. I developed the optics, electronics and firmware of a laser excited scanning confocal microscope for material characterization. The system is still being used and upgraded currently.</p>
+								</article>
+								<article>
+									<a class="image"><img src="images/space_orbit.jpg" alt="" /></a>
+									<h3 class="major">Space Orbit Design</h3>
+									<p>This was my first research project during undergraduate studies, where we develop fast algorithm on estimating reachability problem of low thrust spacecrafts. We managed to build a O(N*k) algorithm compare to the traditional O(N<sup>k</sup>) cost. The results were presented in IAC2017 conference.</p>
+								</article>
+							</section>
+						</div>
 					</section>
 
 				<!-- Footer -->
