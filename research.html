@@ -43,41 +43,69 @@
 						<header>
 							<div class="inner">
 								<h2>Research Highlights</h2>
+								<p>I am enthusiastic in instrumental development for both optical and radio astronomy. <br> I believe that some technologies in optical astronomy can be made useful in radio astronomy and vice versa. </p>
+								<p>I am also interested in astrophysical and cosmological observation and experiments, expecially in transient events. </p>
 							</div>
 						</header>
-
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-									<h3 class="major">The Ultra-Fast Astronomy Project: </br> Single Photon Imager for Nanosecond Astrophysics (SPINA)</h3>
-									<p>In the Ultra-Fast Astronomy (UFA) program lead by Prof. George F. Smoot, we aim to survey the optical night sky on millisecond and shorter time scales, where we expect to see transients or variabilities from astronomical targets. </p>
-
-									<p>We designed a position sensitive silicon photomultiplier (PS-SiPM) based single photon imager, which we call the Single Photon Imager for Nanaosecond Astrophysics (SPINA). When an photon is detected on the PS-SiPM, a photo-electron is generated and amplified into a electric pulse, which is then distributed into the four anodes of the sensor. The readout system on the SPINA system will capture their pulse height, and interpret them as a time series of position, pulse strength with 8ns timing accuracy. We can then interpret this data stream of photon into Ultra-Fast light curve of astronomical objects. </p>
-									<p> I designed and developed the electronic system, cooling system and mechanical mounting of the SPINA system as my Ph.D. thesis project.</p>
-									<img src="images/SPINA_internal.jpg" alt="The SPINA system at work" width="800">
-									<h3 class="major">PS-SiPM Readout electronic system</h3>
-									<p>Reading the high-speed analog pulse from the PS-SiPM detector is one of the challenge in the SPINA system, especially when we wanted to do it simple, cost efficient and on a single electronic board. 
-									</p>
-									<p>	
-										After some testing and experiments, we found commercial Analog Front-End (AFE) developed for medical ultrasound act as a good readout for SiPM system. 
-										The AFE5818 from Texa Instrument can support 16 channels readout with 54dB, Low-noise amplification, in-chip tunable filters and 14bits, 65Msps ADC readout. 
-									</p>
-									<p>
-										We designed our readout system based on the AFE5818 and a Field Programmable Gate Array Multipurpose System on ChIP (FPGA-MPSoC). 
-										This readout system sucessfully capture the signal from our PS-SiPM, and perform realtime processing to decode the position information of each event. 
-										The readout system also generate bias voltage to drive the PS-SiPM with individual channel tunabing ability.
-									</p>
-									<img src="images/readout_board.png" alt="readout PCB of the SPINA system">
-									<h3 class="major">Observatory Visit</h3>
-									<p>We installed the SPINA system on the Nazarbayev University Transient Telescope at the Assy-Turgen Astrophysical Observatory (NUTTelA-TAO) for the first On-Sky testing at Jul 2022. Here is a timelapse video of us installing and testing the SPINA system. </p>
-									<video width="810" height="540" autoplay muted>
-										<source src="images/observatory_timelapse.mp4" type="video/mp4">
-									</video>
-								</div>
-							</div>
 					</section>
 
-					<section id="one" class="wrapper spotlight alt style2">
+					<section id="CHORD" class="wrapper ">	
+						<div class="inner">
+							<h3 class="major">The Canadian Hydrogen Observatory and Radio-transient Detector (CHORD)</h3>
+							<p>CHORD is a next-generation radio telescope currently under development and construction with effort from pan-Canadian astronomers, together with international collaboration.
+							<br> Designed as an ultra-wideband (300-1500MHz), "large-N, small-D" telescope with VLBI outrigger stations, CHORD's primary goals include conducting advanced cosmological and astrophysical measurements and studying radio transients.
+							</p>
+							<p>I am developing the analog signal chain and analog power distribution circuit for the CHORD array together with students.</p>
+							<p>A prototype of the analog signal chain, with amplifiers, tranmission cables and analog filters</p>
+							<a class="image"><img src="images/CHORD_analog.jpg" alt="A prototype of the differential signal chain for CHORD array" style="width: 30vw; min-width: 100px;"></a>
+							<p>A prototype of power distribution system to power the amplifiers</p>
+							<a class="image"><img src="images/CHORD_PWR.jpg" alt="the main power distribution board for CHORD analog chain" style="width: 30vw; min-width: 100px;"></a>
+						</div>
+					</section>
+
+					<section id="RFoF" class="wrapper alt style2">	
+						<div class="inner">
+							<h3 class="major">Developing a low-cost, differential analog solution with Radio-over-fiber (RFoF) for radio telescope arrays</h3>
+							<p>Optical fibers, with their immunity to electromagnetic interference, can offer long-range signal transmission for radio telescopes, substituting coaxial cables. <br>
+								We propose a novel, economical approach by adapting commercial digital Small Form-factor Pluggable (SFP) modules for analog Radio-over-Fiber (RFoF) usage. <br>
+								By repurposing these modules with tailored analog circuits, we can transmit RF signals up to several gigahertz. <br>
+								Initial tests with a 3m LC fiber achieved flat, low-loss transmission for bands greater than 2 GHz.
+							</p>
+							<a class="image"><img src="images/RFoF.jpg" alt="An early prototype of the differential RFoF system" style="width: 30vw; min-width: 100px;"></a>
+						</div>
+					</section>
+
+					<section id="UFA" class="wrapper style3">	
+					<!-- Content -->
+						<div class="inner">
+							<h3 class="major">The Ultra-Fast Astronomy Project: </br> Single Photon Imager for Nanosecond Astrophysics (SPINA)</h3>
+							<p>In the Ultra-Fast Astronomy (UFA) program lead by Prof. George F. Smoot, we aim to survey the optical night sky on millisecond and shorter time scales, where we expect to see transients or variabilities from astronomical targets. </p>
+
+							<p>We designed a position sensitive silicon photomultiplier (PS-SiPM) based single photon imager, which we call the Single Photon Imager for Nanaosecond Astrophysics (SPINA). When an photon is detected on the PS-SiPM, a photo-electron is generated and amplified into a electric pulse, which is then distributed into the four anodes of the sensor. The readout system on the SPINA system will capture their pulse height, and interpret them as a time series of position, pulse strength with 8ns timing accuracy. We can then interpret this data stream of photon into Ultra-Fast light curve of astronomical objects. </p>
+							<p> I designed and developed the electronic system, cooling system and mechanical mounting of the SPINA system as my Ph.D. thesis project.</p>
+							<img src="images/SPINA_internal.jpg" alt="The SPINA system at work" width="800">
+							<h3 class="major">PS-SiPM Readout electronic system</h3>
+							<p>Reading the high-speed analog pulse from the PS-SiPM detector is one of the challenge in the SPINA system, especially when we wanted to do it simple, cost efficient and on a single electronic board. 
+							</p>
+							<p>	
+								After some testing and experiments, we found commercial Analog Front-End (AFE) developed for medical ultrasound act as a good readout for SiPM system. 
+								The AFE5818 from Texa Instrument can support 16 channels readout with 54dB, Low-noise amplification, in-chip tunable filters and 14bits, 65Msps ADC readout. 
+							</p>
+							<p>
+								We designed our readout system based on the AFE5818 and a Field Programmable Gate Array Multipurpose System on Chip (FPGA-MPSoC). 
+								This readout system sucessfully capture the signal from our PS-SiPM, and perform realtime processing to decode the position information of each event. 
+								The readout system also generate bias voltage to drive the PS-SiPM with individual channel tunabing ability.
+							</p>
+							<img src="images/readout_board.png" alt="readout PCB of the SPINA system">
+							<h3 class="major">Observatory Visit</h3>
+							<p>We installed the SPINA system on the Nazarbayev University Transient Telescope at the Assy-Turgen Astrophysical Observatory (NUTTelA-TAO) for the first On-Sky testing at Jul 2022. Here is a timelapse video of us installing and testing the SPINA system. </p>
+							<video width="810" height="540" autoplay muted>
+								<source src="images/observatory_timelapse.mp4" type="video/mp4">
+							</video>
+						</div>
+					</section>
+
+					<section id="MKIDs" class="wrapper spotlight alt style4">
 						<div class="inner">
 							<a class="image"><img src="images/mkids.jpg" alt="" /></a>
 							<div class="content">
@@ -88,10 +116,11 @@
 						</div>
 					</section>
 
-					<section id="two" class="wrapper spotlight style1">
+					<section id="Pub" class="wrapper spotlight style1">
 						<div class="inner">
-							<div class="content">
+							<div class="content" align="left">
 								<h2 class="major">Publication highlights</h2>
+								<a href = "https://ieeexplore.ieee.org/document/10285601"><p><b>Lau, A. W. K.</b>, Nurzhan, S., Zhanat, M., Chan, Y. Y., Shafiee, M., Grossan, B. & Smoot, G. F. (2023). <i>Initial On-Sky Performance testing of the Single-Photon Imager for Nanosecond Astrophysics (SPINA) system</i>, In IEEE Transactions on Instrumentation and Measurement, v. 72, October 2023, article number 10285601</p></a>
 								<a href = "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12191/121910Y/Development-of-position-sensitive-photon-counting-imager-for-Ultra-Fast/10.1117/12.2628864.short"><p><b>Lau, A. W. K.</b>, Chan, Y. Y., Shafiee, M., Smoot, G. F., & Grossan, B. (2022). <i>Development of position-sensitive photon-counting imager for Ultra-Fast Astronomy</i>, In X-Ray, Optical, and Infrared Detectors for Astronomy X (Vol. 12191, pp. 312-329). SPIE.</p></a>
 								<a href = "https://www.spiedigitallibrary.org/journals/Journal-of-Astronomical-Telescopes-Instruments-and-Systems/volume-6/issue-4/046002/On-sky-silicon-photomultiplier-detector-performance-measurements-for-millisecond-to/10.1117/1.JATIS.6.4.046002.short"><p><b>Lau, A. W. K.</b>, Shafiee, M., Smoot, G. F., Grossan, B., & Zhanat M.(2020). <i>On-sky silicon photomultiplier detector performance measurements for millisecond to sub-microsecond optical source variability studies</i> Journal of Astronomical Telescopes, Instruments, and Systems 6.4 (2020): 046002</p></a>
 								<h3 class="major">Recent Presentation</h3>
@@ -102,7 +131,7 @@
 						</div>
 					</section>
 
-					<section id="three" class="wrapper alt style1">
+					<section id="prev" class="wrapper alt style5">
 						<div class="inner">
 							<h2 class="major">Past Projects</h2>
 							<section class="features">
@@ -131,7 +160,7 @@
 								<li class="icon solid fa-university"><a href="https://scholar.google.com/citations?hl=zh-TW&user=hddv02QAAAAJ">Google Scholar Page</a></li>
 							</ul>
 							<ul class="copyright">
-								<li> Updated Sep 2022.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li> Updated Jan 2024.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
