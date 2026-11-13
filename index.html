@@ -1,166 +1,195 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Albert Wai Kit Lau</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Albert Wai Kit Lau, Dunlap Postdoctoral Fellow at the University of Toronto, working on astronomical instrumentation: RF electronics, single-photon detectors and readout systems." />
-		<meta name="author" content="Albert Wai Kit Lau" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Albert Wai Kit Lau" />
-		<meta property="og:description" content="Dunlap Postdoctoral Fellow at the University of Toronto, working on astronomical instrumentation." />
-		<meta property="og:url" content="https://awklau.github.io/" />
-		<meta property="og:image" content="https://awklau.github.io/images/Albert.jpg" />
-		<link rel="icon" type="image/png" href="icon.png" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Albert Wai Kit Lau | Astronomical instrumentation</title>
+	<meta name="description" content="Albert Wai Kit Lau is a Dunlap Postdoctoral Fellow at the University of Toronto. He builds radio and optical instruments for fast transients, including CHORD, CHARTS and single-photon detectors." />
+	<meta name="author" content="Albert Wai Kit Lau" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Albert Wai Kit Lau | Astronomical instrumentation" />
+	<meta property="og:description" content="Instruments that observe the sky for transients in both radio and optical light." />
+	<meta property="og:url" content="https://awklau.github.io/" />
+	<meta property="og:image" content="https://awklau.github.io/images/hero-milkyway.jpg" />
+	<link rel="icon" type="image/png" href="icon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" />
+	<link rel="stylesheet" href="assets/css/site.css" />
+	<script>
+		// Apply a saved theme before first paint
+		(function () {
+			var t = new URLSearchParams(location.search).get('theme');
+			try { t = t || localStorage.getItem('theme'); } catch (e) {}
+			if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+		})();
+	</script>
+</head>
+<body>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<a class="skip" href="#main">Skip to content</a>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Albert Wai Kit Lau</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+<header class="site-header">
+	<div class="wrap">
+		<a class="brand" href="index.html">Albert Wai Kit Lau</a>
+		<nav class="site-nav" aria-label="Main">
+			<a href="index.html" aria-current="page">Home</a>
+			<a href="research.html">Research</a>
+			<a href="publications.html">Publications</a>
+			<a href="mentoring.html">Mentoring &amp; Teaching</a>
+			<a href="gallery.html">Gallery</a>
+			<a class="cv" href="CV.pdf">CV</a>
+		</nav>
+		<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Light / dark">&#9680;</button>
+	</div>
+</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="research.html">Research Highlights</a></li>
-								<li><a href="gallery/gallery.html">Gallery</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+<main id="main">
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo">
-								<span class="icon">
-									<i class="fas fa-space-shuttle fa-2x"></i>
-								</span>
-							</div>
-							<h2>Albert Wai Kit Lau</h2>
-							<p>Looking up into the night sky, wondering how everything works</p>
-						</div>
-					</section>
+	<section class="hero">
+		<div class="wrap">
+			<div class="hero-text">
+			<div class="hero-id">
+				<img class="portrait" src="images/Albert.jpg" alt="Portrait of Albert Wai Kit Lau" width="108" height="108" />
+				<div>
+					<p class="role mono">Dunlap Postdoctoral Fellow &middot; University of Toronto</p>
+					<h1>Albert Wai Kit Lau</h1>
+				</div>
+			</div>
+			<hr class="rule" />
+			<p class="pitch">I build instruments that observe the sky for transients in both <span class="radio">radio</span> and <span class="optical">optical</span> light.</p>
+			<ul class="hero-links">
+				<li><a class="primary js-email" href="#contact" data-user="awk.lau" data-domain="utoronto.ca" data-keep-label>Email</a></li>
+				<li><a href="CV.pdf">CV</a></li>
+				<li><a href="https://scholar.google.com/citations?hl=en&amp;user=hddv02QAAAAJ">Google Scholar</a></li>
+				<li><a href="https://orcid.org/0000-0002-2457-3298">ORCID</a></li>
+				<li><a href="https://github.com/awklau">GitHub</a></li>
+			</ul>
+			</div>
+		</div>
+		<p class="hero-credit mono">The Milky Way, from my own camera</p>
+	</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+	<section class="section" id="research">
+		<div class="wrap">
+			<h2>Research</h2>
+			<p class="lede">I am an instrumental astronomer working on fast transients. My work connects radio-array electronics, fast optical detectors and the timing that lets the two observe together.</p>
 
-						<!-- One -->
-							<section id="one" class="wrapper alt spotlight style1">
-								<div class="inner">
-									<span class="image"><img src="images/Albert.jpg" alt="Portrait of Albert Wai Kit Lau" /></span>
-									<div class="content" style="text-align: left;">
-										<h2 class="major">About me</h2>
-										<p>Welcome to my page!<br /> I'm Albert, a Dunlap Postdoctoral Fellow<br /> at the Dunlap Institute for Astronomy and Astrophysics, University of Toronto.</p>
-										<p>I received my Ph.D. in Physics in 2023<br /> from the Hong Kong University of Science and Technology,<br /> under the supervision of Prof. George F. Smoot.</p>
-										<p>My interest in astronomy began in childhood.<br /> I've always been fascinated by the night sky and how the universe works.<br /> This passion led me to pursue a career in astronomical research.</p>
-										<a href="CV.pdf" class="special">Curriculum Vitae</a>
-									</div>
-								</div>
-							</section>
+			<div class="cards">
+				<a class="card" href="research.html#radio">
+					<img src="images/chord-dishes.jpg" alt="Rows of CHORD radio dishes at the Dominion Radio Astrophysical Observatory" />
+					<div class="card-body">
+						<p class="band mono"><span class="dot radio"></span>Radio &middot; 300&ndash;1500 MHz</p>
+						<h3>Radio-array instrumentation</h3>
+						<p>I lead the analog signal chain and power distribution for CHORD, and antenna and analog-system development for CHARTS, a 256-element transient array at 300&ndash;500 MHz.</p>
+						<ul class="chips"><li>CHORD</li><li>CHARTS</li><li>CHIME/FRB Outriggers</li><li>Radio-over-fiber</li></ul>
+					</div>
+				</a>
 
-						<!-- Two -->
-							<section id="two" class="wrapper spotlight style2">
-								<div class="inner">
-									<a href="research.html" class="image"><img src="images/research.jpg" alt="Research hardware" /></a>
-									<div class="content">
-										<h2 class="major">Research</h2>
-										<p>Research interests:</p>
-										<p>Instrumental and experimental astronomy, especially radio frequency electronics, photon-detecting instruments and mixed-signal (analog and digital) readout system development.</p>
-										<p>Current projects:<br /> RF design for the Canadian Hydrogen Observatory and Radio-transient Detector (CHORD),<br /> development and calibration of multiple single-photon detectors,<br /> and Radio Frequency over Fiber (RFoF) technology development for radio astronomy.</p>
-										<a href="research.html" class="special">Research Highlights</a>
-									</div>
-								</div>
-							</section>
+				<a class="card" href="research.html#optical">
+					<img src="images/SPINA_internal.jpg" alt="The SPINA single-photon imager mounted on a telescope" />
+					<div class="card-body">
+						<p class="band mono"><span class="dot"></span>Optical &middot; ns to ms</p>
+						<h3>Fast optical detectors</h3>
+						<p>I designed, built and field-tested SPINA, a single-photon imager with about 8 ns timing, and I develop sCMOS electronics and FPGA firmware for the LUVCam space cameras.</p>
+						<ul class="chips"><li>SPINA</li><li>False-alarm statistics</li><li>sCMOS</li><li>LUVCam</li></ul>
+					</div>
+				</a>
 
-						<!-- Three -->
-							<section id="three" class="wrapper alt spotlight style3">
-								<div class="inner">
-									<a href="https://www.centaurioptics.com/" class="image"><img src="images/pic03.jpg" alt="Centauri Optics logo" /></a>
-									<div class="content" style="text-align: left;">
-										<h2 class="major">Start-up: Centauri Optics</h2>
-										<p>In 2018 (just before I started my Ph.D.), I co-founded a start-up company with<br />Prof. KS Wong (my undergraduate thesis supervisor), Dr. Chan and Anthony Lam.</p>
-										<p>We aim to develop low-cost, portable and remotely controllable microscopes<br /> for laboratory and educational use.</p>
-										<a href="https://www.centaurioptics.com/" class="special">Centauri Optics Webpage</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four" class="wrapper style5">
-								<div class="inner">
-									<h2 class="major">Personal interests</h2>
-									<section class="features">
-										<article>
-											<a href="gallery/gallery.html" class="image"><img src="images/astro_pic.jpg" alt="Telescope set up under the night sky" /></a>
-											<h3 class="major">Stargazing and Astrophotography</h3>
-											<p>Despite the light pollution in the city, we take our telescopes and cameras out to the suburbs whenever there is a clear sky. I also take night sky photos during my trips.</p>
-											<p>Sometimes I also help local astronomy societies hold astronomy events.</p>
-											<a href="gallery/gallery.html" class="special">Gallery</a>
-										</article>
-										<article>
-											<span class="image"><img src="images/hiking.jpg" alt="Hiking" /></span>
-											<h3 class="major">Outdoor</h3>
-											<p>I enjoy hiking and camping in my leisure time, as I feel relaxed in nature.</p>
-										</article>
-										<article>
-											<span class="image"><img src="images/windsurf.jpg" alt="Windsurfing" /></span>
-											<h3 class="major">Water sports</h3>
-											<p>In the burning hot summer, I do water sports like windsurfing, kayaking and sailing.</p>
-										</article>
-										<article>
-											<span class="image"><img src="images/bouldering.jpg" alt="Indoor bouldering" /></span>
-											<h3 class="major">Indoor sports</h3>
-											<p>Sometimes I go indoor bouldering or sport climbing with my friends (as a newbie). I would like to try outdoor climbing in the future.</p>
-										</article>
-									</section>
-								</div>
-							</section>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Please feel free to contact me through the following links.</p>
-							<ul class="contact">
-								<li class="icon solid fa-envelope"><a href="mailto:albertkit2000@gmail.com">albertkit2000@gmail.com</a></li>
-								<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/albertwaikit.lau">facebook.com/albertwaikit.lau</a></li>
-								<li class="icon solid fa-university"><a href="https://scholar.google.com/citations?hl=en&amp;user=hddv02QAAAAJ">Google Scholar Page</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>Updated Jan 2024.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
+				<a class="card" href="research.html#joint">
+					<img src="images/simpleclock.jpg" alt="The SimpleClock prototype timing board" />
+					<div class="card-body">
+						<p class="band mono"><span class="dot both"></span>Radio + optical</p>
+						<h3>Observing both at once</h3>
+						<p>At Gemini South I helped install the IQUEYE single-photon instrument and led simultaneous radio observations with the 46 m Algonquin telescope. SimpleClock supplies the shared timing.</p>
+						<ul class="chips"><li>IQUEYE</li><li>Algonquin 46 m</li><li>SimpleClock</li></ul>
+					</div>
+				</a>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<p style="margin: 1.8rem 0 0;"><a class="more" href="research.html">All research projects &rarr;</a></p>
+		</div>
+	</section>
 
-	</body>
+	<section class="section" id="highlights">
+		<div class="wrap split">
+			<div>
+				<h2>Recent highlights</h2>
+				<ul class="news">
+					<li><time class="mono">2026</time><span>Paper on the CHARTS differential active antenna and frequency-division multiplexing published at EuCAP 2026.</span></li>
+					<li><time class="mono">Feb 2026</time><span>Awarded a Blue-Sky Idea Grant by the Dunlap Institute.</span></li>
+					<li><time class="mono">2026</time><span>SimpleClock, a low-cost GNSS-disciplined timing reference, open-sourced.</span></li>
+					<li><time class="mono">2025</time><span>IQUEYE at Gemini South: optical pulsations detected from the Crab pulsar, with simultaneous radio coverage.</span></li>
+					<li><time class="mono">2025</time><span>Lectured and ran laboratories at the Dunlap Summer School.</span></li>
+					<li><time class="mono">2024</time><span>Young scientist at the Lindau Nobel Laureate Meeting.</span></li>
+				</ul>
+			</div>
+
+			<div>
+				<h2>Selected publications</h2>
+				<ul class="pubs">
+					<li>
+						<a class="title" href="https://doi.org/10.1117/1.JATIS.11.2.028007">False alarm rate-based statistical detection limit for astronomical photon detectors</a>
+						<span class="authors"><b>Lau, A. W. K.</b>, Fung, L. W. H., &amp; Smoot, G. F.</span>
+						<span class="venue mono">JATIS 11(2), 028007 &middot; 2025</span>
+					</li>
+					<li>
+						<a class="title" href="publications.html#charts-eucap-2026">Differential Active Planar Antenna and Frequency-Division Multiplexing with Commercial Electronics for CHARTS Interferometer</a>
+						<span class="authors"><b>Lau, A. W. K.</b>, Burgos, G., Pollarolo, B., Manosalva, S., et al.</span>
+						<span class="venue mono">EuCAP &middot; 2026</span>
+					</li>
+					<li>
+						<a class="title" href="https://arxiv.org/abs/2504.05192">CHIME/FRB Outriggers: Design Overview</a>
+						<span class="authors">The CHIME/FRB Collaboration, including <b>Lau, A. W. K.</b></span>
+						<span class="venue mono">ApJ 993(1), 55 &middot; 2025</span>
+					</li>
+					<li>
+						<a class="title" href="publications.html#rfof-spie-2024">Developing a low-cost, compact radio-over-fiber (RFoF) linkage for radio telescope arrays</a>
+						<span class="authors"><b>Lau, A. W. K.</b>, Vanderlinde, K., Mena-Parra, J., &amp; Lansdale, C.</span>
+						<span class="venue mono">Proc. SPIE 13096 &middot; 2024</span>
+					</li>
+					<li>
+						<a class="title" href="https://doi.org/10.1109/TIM.2023.3324342">Initial On-Sky Performance Testing of the Single-Photon Imager for Nanosecond Astrophysics (SPINA) System</a>
+						<span class="authors"><b>Lau, A. W. K.</b>, Shaimoldin, N., Maksut, Z., Chan, Y. Y., et al.</span>
+						<span class="venue mono">IEEE Trans. Instrum. Meas. 72 &middot; 2023</span>
+					</li>
+				</ul>
+				<p><a class="more" href="publications.html">Full publication list &rarr;</a></p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="about">
+		<div class="wrap about">
+			<div>
+				<h2>About</h2>
+				<p style="margin-top: 1.2rem;">I am a Dunlap Postdoctoral Fellow at the Dunlap Institute for Astronomy and Astrophysics, University of Toronto. I work on electronics, hardware and FPGA design for radio and optical telescopes, and I have mentored ten undergraduate and graduate researchers on these projects.</p>
+				<p>I received my Ph.D. in Physics from the Hong Kong University of Science and Technology in 2023, supervised by Prof. George F. Smoot and Prof. Kam-Biu Luk, after a B.Sc. there in Physics and Computer Science. Before my Ph.D. I co-founded <a href="https://www.centaurioptics.com/">Centauri Optics</a>, a Hong Kong company that develops scientific educational products.</p>
+				<p>My interest in astronomy began in childhood, looking up at the night sky and wondering how everything works. I still take a telescope and camera out of the city whenever the sky is clear. Away from the telescope I hike, camp, windsurf and climb.</p>
+				<p><a class="more" href="mentoring.html">Mentoring and teaching &rarr;</a></p>
+			</div>
+			<div>
+				<a class="sky" href="gallery.html" aria-label="Open the astrophotography gallery">
+					<img src="gallery/images/thumbs/orion_center.jpg" alt="The centre of Orion with the Horsehead and Orion nebulae" loading="lazy" />
+					<img src="gallery/images/thumbs/aurora-lake-1.jpg" alt="Purple and green aurora over a lake" loading="lazy" />
+					<img src="gallery/images/thumbs/M57.jpg" alt="M57, the Ring Nebula" loading="lazy" />
+					<img src="gallery/images/thumbs/milkyway.jpg" alt="The Milky Way above a line of trees" loading="lazy" />
+				</a>
+				<p class="sky-caption">My own astrophotography. <a href="gallery.html">See the gallery &rarr;</a></p>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+	<div class="wrap">
+		<p><strong>Albert Wai Kit Lau</strong><br />Dunlap Institute for Astronomy and Astrophysics<br />University of Toronto, 50 St. George Street<br />Toronto, ON M5S 3H4, Canada</p>
+		<p><a class="js-email" data-user="awk.lau" data-domain="utoronto.ca">awk.lau<span class="at"></span>utoronto.ca</a></p>
+		<p><a href="https://scholar.google.com/citations?hl=en&amp;user=hddv02QAAAAJ">Google Scholar</a> &middot; <a href="https://orcid.org/0000-0002-2457-3298">ORCID</a> &middot; <a href="https://github.com/awklau">GitHub</a><br /><span class="mono">Updated November 2026</span></p>
+	</div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
 </html>

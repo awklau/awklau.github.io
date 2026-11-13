@@ -1,187 +1,312 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Research Highlights | Albert Wai Kit Lau</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Research highlights of Albert Wai Kit Lau: CHORD analog signal chain, Radio-over-Fiber for radio telescopes, the SPINA single-photon imager for ultra-fast astronomy, and MKIDs readout." />
-		<meta name="author" content="Albert Wai Kit Lau" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Research Highlights | Albert Wai Kit Lau" />
-		<meta property="og:description" content="Instrumentation for optical and radio astronomy: CHORD, RFoF, SPINA and MKIDs." />
-		<meta property="og:url" content="https://awklau.github.io/research.html" />
-		<meta property="og:image" content="https://awklau.github.io/images/SPINA_internal.jpg" />
-		<link rel="icon" type="image/png" href="icon.png" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Research | Albert Wai Kit Lau</title>
+	<meta name="description" content="Research by Albert Wai Kit Lau: radio-array instrumentation for CHORD and CHARTS, fast optical detectors including SPINA and LUVCam, and simultaneous radio and optical observations of fast transients." />
+	<meta name="author" content="Albert Wai Kit Lau" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Research | Albert Wai Kit Lau" />
+	<meta property="og:description" content="Radio-array instrumentation, fast optical detectors, and observing the same sky in both at once." />
+	<meta property="og:url" content="https://awklau.github.io/research.html" />
+	<meta property="og:image" content="https://awklau.github.io/images/chord-dishes.jpg" />
+	<link rel="icon" type="image/png" href="icon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" />
+	<link rel="stylesheet" href="assets/css/site.css" />
+	<script>
+		// Apply a saved theme before first paint
+		(function () {
+			var t = new URLSearchParams(location.search).get('theme');
+			try { t = t || localStorage.getItem('theme'); } catch (e) {}
+			if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+		})();
+	</script>
+</head>
+<body>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<a class="skip" href="#main">Skip to content</a>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Back</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+<header class="site-header">
+	<div class="wrap">
+		<a class="brand" href="index.html">Albert Wai Kit Lau</a>
+		<nav class="site-nav" aria-label="Main">
+			<a href="index.html">Home</a>
+			<a href="research.html" aria-current="page">Research</a>
+			<a href="publications.html">Publications</a>
+			<a href="mentoring.html">Mentoring &amp; Teaching</a>
+			<a href="gallery.html">Gallery</a>
+			<a class="cv" href="CV.pdf">CV</a>
+		</nav>
+		<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Light / dark">&#9680;</button>
+	</div>
+</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="research.html">Research Highlights</a></li>
-								<li><a href="gallery/gallery.html">Gallery</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
+<main id="main">
+
+	<section class="page-head">
+		<div class="wrap">
+			<h1>Research</h1>
+			<p>I build instruments for astronomy's fastest signals. Fast radio bursts and pulsar pulses change within milliseconds or less, and optical measurements at a matching cadence remain rare. My work spans radio-array electronics, fast optical detectors, and the timing that lets the two observe the same sky at the same moment.</p>
+			<ul class="jump">
+				<li><a href="#radio">Radio arrays</a></li>
+				<li><a href="#optical">Fast optical detectors</a></li>
+				<li><a href="#joint">Radio + optical</a></li>
+				<li><a href="#other">Other work</a></li>
+				<li><a href="#funding">Funding</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- ============ Radio ============ -->
+	<section class="section" id="radio">
+		<div class="wrap">
+			<header class="theme-head">
+				<p class="band mono"><span class="dot radio"></span>Radio</p>
+				<h2>Radio-array instrumentation</h2>
+				<p class="lede">Radio arrays find transients by watching large areas of sky continuously. I work on the analog hardware between the antenna and the digitizer, where noise, interference, cost and manufacturability decide what an array can do.</p>
+			</header>
+
+			<article class="project" id="chord">
+				<div>
+					<p class="when mono">2023 &ndash; present</p>
+					<h3>CHORD</h3>
+					<p>The Canadian Hydrogen Observatory and Radio-transient Detector (CHORD) is a next-generation radio telescope with a planned core of 512 six-metre dishes operating at 300&ndash;1500 MHz, plus outrigger stations for very long baseline interferometry. It builds on CHIME to study fast radio bursts, cosmology and fundamental physics.</p>
+					<p class="role-line"><strong>My role.</strong> I lead the team developing the analog signal transport from the low-noise front ends to the digitizers: amplification, filtering and gain equalization, and a remotely monitored power system. We validate these systems on the CHORD pathfinder and oversee manufacturing and integration for the core array. I also contributed to the construction of the CHIME/FRB Outriggers.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="https://arxiv.org/abs/2504.05192">CHIME/FRB Outriggers: Design Overview</a> <span class="venue">ApJ, 2025</span></li>
+					</ul>
+				</div>
+				<div class="figs">
+					<figure>
+						<img src="images/chord-dishes.jpg" alt="Rows of white CHORD radio dishes in a dry valley" width="1600" height="1067" />
+						<figcaption>CHORD dishes at the Dominion Radio Astrophysical Observatory in British Columbia.</figcaption>
+					</figure>
+					<figure>
+						<div class="figs two">
+							<img src="images/CHORD_analog.jpg" alt="Prototype of the differential analog signal chain for CHORD" loading="lazy" />
+							<img src="images/CHORD_PWR.jpg" alt="Main power distribution board for the CHORD analog chain" loading="lazy" />
 						</div>
-					</nav>
+						<figcaption>Prototypes of the analog signal chain (left) and the power distribution board (right).</figcaption>
+					</figure>
+				</div>
+			</article>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Research Highlights</h2>
-								<p>I am enthusiastic about instrument development for both optical and radio astronomy.<br /> I believe that some technologies in optical astronomy can be made useful in radio astronomy and vice versa.</p>
-								<p>I am also interested in astrophysical and cosmological observations and experiments, especially of transient events.</p>
-							</div>
-						</header>
-					</section>
+			<article class="project" id="charts">
+				<div>
+					<p class="when mono">2023 &ndash; present</p>
+					<h3>CHARTS</h3>
+					<p>The Canadian&ndash;Chilean Array for Radio Transient Studies (CHARTS) is a wide-field, low-frequency interferometer that will monitor the southern sky for bright, nearby fast radio bursts, using 256 broad-beam antennas at 300&ndash;500 MHz. Its band and broad beams demand careful control of interference, calibration, noise and cost.</p>
+					<p class="role-line"><strong>My role.</strong> I lead antenna design, low-noise amplification, analog transport, frequency-division multiplexing and front-end digitization, and I supervise students' electronics and FPGA work from schematic through to field validation.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="publications.html#charts-eucap-2026">Differential Active Planar Antenna and Frequency-Division Multiplexing with Commercial Electronics for CHARTS Interferometer</a> <span class="venue">EuCAP, 2026</span></li>
+						<li><a href="publications.html#charts-isap-2025">Active Planar Antenna Design for CHARTS Array</a> <span class="venue">ISAP, 2025</span></li>
+						<li><a href="https://doi.org/10.23919/EuCAP63536.2025.10999353">Canadian-Chilean Array for Radio Transient Studies (CHARTS): Analog System Developments</a> <span class="venue">EuCAP, 2025</span></li>
+					</ul>
+				</div>
+				<figure>
+					<img src="images/charts-site.jpg" alt="Rows of small antennas on a concrete pad, with mountains behind" width="1600" height="960" loading="lazy" />
+					<figcaption>CHARTS antennas under construction in Chile.</figcaption>
+				</figure>
+			</article>
 
-					<section id="CHORD" class="wrapper">
-						<div class="inner">
-							<h3 class="major">The Canadian Hydrogen Observatory and Radio-transient Detector (CHORD)</h3>
-							<p>CHORD is a next-generation radio telescope currently under development and construction by pan-Canadian astronomers, together with international collaborators.
-							<br /> Designed as an ultra-wideband (300&ndash;1500&nbsp;MHz), "large-N, small-D" telescope with VLBI outrigger stations, CHORD's primary goals include advanced cosmological and astrophysical measurements and the study of radio transients.
-							</p>
-							<p>I am developing the analog signal chain and the analog power distribution circuit for the CHORD array together with students.</p>
-							<p>A prototype of the analog signal chain, with amplifiers, transmission cables and analog filters:</p>
-							<span class="image"><img src="images/CHORD_analog.jpg" alt="A prototype of the differential signal chain for the CHORD array" style="width: 480px; max-width: 100%;" /></span>
-							<p>A prototype of the power distribution system that powers the amplifiers:</p>
-							<span class="image"><img src="images/CHORD_PWR.jpg" alt="The main power distribution board for the CHORD analog chain" style="width: 480px; max-width: 100%;" /></span>
-						</div>
-					</section>
+			<article class="project" id="rfof">
+				<div>
+					<p class="when mono">2023 &ndash; present</p>
+					<h3>Differential electronics and radio-over-fibre</h3>
+					<p>Optical fibre is immune to electromagnetic interference and can carry radio signals over long distances in place of coaxial cable. I developed a low-cost, compact analog radio-over-fibre link from commercially available components, and designed a link that is deployed in the signal chain of the 46 m telescope at the Algonquin Radio Observatory.</p>
+					<p class="role-line"><strong>My role.</strong> I am the principal investigator and supervise the students on this work, which also includes a low-cost, ultrawideband differential low-noise amplifier for interferometric radio telescopes.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="publications.html#rfof-spie-2024">Developing a low-cost, compact radio-over-fiber (RFoF) linkage for radio telescope arrays</a> <span class="venue">Proc. SPIE, 2024</span></li>
+						<li><a href="https://arxiv.org/abs/2607.21715">Low-cost, ultrawideband, differential low-noise amplifier for interferometric radio telescopes</a> <span class="venue">Proc. SPIE, 2026</span></li>
+					</ul>
+				</div>
+				<figure>
+					<img src="images/RFoF.jpg" alt="Early prototype of the differential radio-over-fibre link on a lab bench" loading="lazy" />
+					<figcaption>An early prototype of the differential radio-over-fibre link.</figcaption>
+				</figure>
+			</article>
 
-					<section id="RFoF" class="wrapper alt style2">
-						<div class="inner">
-							<h3 class="major">Developing a low-cost, differential analog solution with Radio-over-Fiber (RFoF) for radio telescope arrays</h3>
-							<p>Optical fibers, with their immunity to electromagnetic interference, can offer long-range signal transmission for radio telescopes in place of coaxial cables.<br />
-								We propose a novel, economical approach that adapts commercial digital Small Form-factor Pluggable (SFP) modules for analog Radio-over-Fiber (RFoF) use.<br />
-								By repurposing these modules with tailored analog circuits, we can transmit RF signals up to several gigahertz.<br />
-								Initial tests with a 3&nbsp;m LC fiber achieved flat, low-loss transmission for bands greater than 2&nbsp;GHz.
-							</p>
-							<span class="image"><img src="images/RFoF.jpg" alt="An early prototype of the differential RFoF system" style="width: 480px; max-width: 100%;" /></span>
-						</div>
-					</section>
+			<article class="project" id="simpleclock">
+				<div>
+					<p class="when mono">2026 &ndash; present</p>
+					<h3>SimpleClock</h3>
+					<p>Instruments at different sites need a common time reference before their data can be combined. SimpleClock is a low-cost GNSS-disciplined oven-controlled crystal oscillator that supplies 10 MHz and pulse-per-second references, with autonomous firmware and thermal control.</p>
+					<p class="role-line"><strong>My role.</strong> I lead its development and validation. The design is open source.</p>
+				</div>
+				<figure>
+					<img src="images/simpleclock.jpg" alt="The SimpleClock prototype circuit board with rows of gold connectors" width="768" height="667" loading="lazy" />
+					<figcaption>The first SimpleClock prototype.</figcaption>
+				</figure>
+			</article>
+		</div>
+	</section>
 
-					<section id="UFA" class="wrapper style3">
-					<!-- Content -->
-						<div class="inner">
-							<h3 class="major">The Ultra-Fast Astronomy Project:<br /> Single Photon Imager for Nanosecond Astrophysics (SPINA)</h3>
-							<p>In the Ultra-Fast Astronomy (UFA) program led by Prof. George F. Smoot, we aim to survey the optical night sky on millisecond and shorter time scales, where we expect to see transients or variability from astronomical targets.</p>
+	<!-- ============ Optical ============ -->
+	<section class="section" id="optical">
+		<div class="wrap">
+			<header class="theme-head">
+				<p class="band mono"><span class="dot"></span>Optical</p>
+				<h2>Fast optical detectors</h2>
+				<p class="lede">A conventional camera exposure is far longer than the events I want to see. These projects push optical detectors to millisecond and nanosecond timescales, and work out how to tell a real flash from detector noise.</p>
+			</header>
 
-							<p>We designed a position-sensitive silicon photomultiplier (PS-SiPM) based single-photon imager, which we call the Single Photon Imager for Nanosecond Astrophysics (SPINA). When a photon is detected by the PS-SiPM, a photo-electron is generated and amplified into an electric pulse, which is then distributed among the four anodes of the sensor. The SPINA readout system captures their pulse heights and interprets them as a time series of positions and pulse strengths with 8&nbsp;ns timing accuracy. We can then turn this photon data stream into ultra-fast light curves of astronomical objects.</p>
-							<p>I designed and developed the electronic system, cooling system and mechanical mounting of the SPINA system as my Ph.D. thesis project.</p>
-							<span class="image fit"><img src="images/SPINA_internal.jpg" alt="The SPINA system at work" /></span>
-							<h3 class="major">PS-SiPM readout electronic system</h3>
-							<p>Reading out the high-speed analog pulses from the PS-SiPM detector is one of the challenges of the SPINA system, especially as we wanted to do it simply, cost-efficiently and on a single electronic board.</p>
-							<p>
-								After some testing and experiments, we found that commercial Analog Front-Ends (AFEs) developed for medical ultrasound work well as a readout for SiPM systems.
-								The AFE5818 from Texas Instruments supports 16-channel readout with 54&nbsp;dB low-noise amplification, on-chip tunable filters and a 14-bit, 65&nbsp;MSPS ADC.
-							</p>
-							<p>
-								We designed our readout system around the AFE5818 and a Field Programmable Gate Array Multiprocessor System-on-Chip (FPGA MPSoC).
-								This readout system successfully captures the signal from our PS-SiPM and performs real-time processing to decode the position of each event.
-								The readout system also generates the bias voltage that drives the PS-SiPM, with individually tunable channels.
-							</p>
-							<span class="image fit"><img src="images/readout_board.jpg" alt="Readout PCB of the SPINA system" /></span>
-							<h3 class="major">Observatory visit</h3>
-							<p>We installed the SPINA system on the Nazarbayev University Transient Telescope at the Assy-Turgen Astrophysical Observatory (NUTTelA-TAO) for its first on-sky tests in July 2022. Here is a timelapse video of us installing and testing the SPINA system.</p>
-							<video controls muted playsinline preload="metadata" style="width: 100%; max-width: 810px; height: auto;">
-								<source src="images/observatory_timelapse.mp4" type="video/mp4" />
-								Your browser does not support embedded video. <a href="images/observatory_timelapse.mp4">Download the timelapse</a>.
-							</video>
-						</div>
-					</section>
+			<article class="project" id="spina">
+				<div>
+					<p class="when mono">2018 &ndash; 2023 &middot; Ph.D. thesis</p>
+					<h3>SPINA: a single-photon imager</h3>
+					<p>The Single-Photon Imager for Nanosecond Astrophysics (SPINA) was built for the Ultra-Fast Astronomy programme led by Prof. George F. Smoot, which surveys the optical sky on millisecond and shorter timescales. SPINA uses a position-sensitive silicon photomultiplier and records each photon's arrival time, position and pulse height with about 8 ns timing.</p>
+					<p>Its readout pairs a 16-channel analog front end originally made for medical ultrasound with an FPGA system-on-chip, which decodes the position of each event in real time and generates the sensor's bias voltages, all on a single board.</p>
+					<p class="role-line"><strong>My role.</strong> I designed, built, characterized and fielded SPINA, including its electronics, cooling and mechanics. Its first on-sky tests were in July 2022 on the Nazarbayev University Transient Telescope at the Assy-Turgen Astrophysical Observatory.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="https://doi.org/10.1109/TIM.2023.3324342">Initial On-Sky Performance Testing of the Single-Photon Imager for Nanosecond Astrophysics (SPINA) System</a> <span class="venue">IEEE Trans. Instrum. Meas., 2023</span></li>
+						<li><a href="publications.html#spina-ojap-2022">A SiPM photon-counting readout system for Ultra-Fast Astronomy</a> <span class="venue">Open Journal of Astrophysics, 2022</span></li>
+						<li><a href="https://doi.org/10.1117/12.2628864">Development of position-sensitive photon-counting imager for Ultra-Fast-Astronomy</a> <span class="venue">Proc. SPIE, 2022</span></li>
+						<li><a href="https://doi.org/10.1117/1.JATIS.6.4.046002">On-sky silicon photomultiplier detector performance measurements for millisecond to sub-microsecond optical source variability studies</a> <span class="venue">JATIS, 2020</span></li>
+					</ul>
+				</div>
+				<div class="figs">
+					<figure>
+						<img src="images/SPINA_internal.jpg" alt="The SPINA instrument, with its cover removed, mounted on a telescope" loading="lazy" />
+						<figcaption>SPINA mounted on the Nazarbayev University Transient Telescope.</figcaption>
+					</figure>
+					<figure>
+						<img src="images/readout_board.jpg" alt="The SPINA readout circuit board with a cooling fan" loading="lazy" />
+						<figcaption>The single-board readout system.</figcaption>
+					</figure>
+					<figure>
+						<video controls muted playsinline preload="metadata">
+							<source src="images/observatory_timelapse.mp4" type="video/mp4" />
+							Your browser does not support embedded video. <a href="images/observatory_timelapse.mp4">Download the time-lapse</a>.
+						</video>
+						<figcaption>Time-lapse of installing and testing SPINA at the observatory, July 2022.</figcaption>
+					</figure>
+				</div>
+			</article>
 
-					<section id="MKIDs" class="wrapper spotlight alt style4">
-						<div class="inner">
-							<span class="image"><img src="images/mkids.jpg" alt="MKIDs readout hardware" /></span>
-							<div class="content">
-								<h2 class="major">MKIDs readout system development</h2>
-								<p>I also participated in designing and programming readout systems for MKIDs in the Energetic Cosmos Laboratory (ECL).</p>
-								<p>Currently, we are testing a few different systems, including the ROACH2 board from minicom electronics,<br /> and designing a readout system based on an I/Q modulator-demodulator and an FPGA board with GHz ADCs/DACs.</p>
-							</div>
-						</div>
-					</section>
+			<article class="project" id="far">
+				<div>
+					<p class="when mono">Published 2025</p>
+					<h3>How faint a flash can a detector claim?</h3>
+					<p>A signal-to-noise threshold that looks safe can still produce many false detections when a search covers a very large number of short time windows, especially if the detector noise is correlated. I developed a false-alarm-rate framework that ties the detection threshold to the observing duration, the search timescale and the measured detector statistics, so that characterizing an instrument translates directly into the confidence of an astronomical claim.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="https://doi.org/10.1117/1.JATIS.11.2.028007">False alarm rate-based statistical detection limit for astronomical photon detectors</a> <span class="venue">JATIS, 2025</span></li>
+					</ul>
+				</div>
+				<figure>
+					<img src="images/research.jpg" alt="Albert holding an instrument inside a telescope dome" loading="lazy" style="aspect-ratio: 4 / 3; object-fit: cover; object-position: center 20%;" />
+					<figcaption>With SPINA in the telescope dome. Working with its data exposed the problem this framework addresses.</figcaption>
+				</figure>
+			</article>
 
-					<section id="Pub" class="wrapper spotlight style1">
-						<div class="inner">
-							<div class="content" style="text-align: left;">
-								<h2 class="major">Publication highlights</h2>
-								<a href="https://ieeexplore.ieee.org/document/10285601"><p><b>Lau, A. W. K.</b>, Nurzhan, S., Zhanat, M., Chan, Y. Y., Shafiee, M., Grossan, B. &amp; Smoot, G. F. (2023). <i>Initial On-Sky Performance testing of the Single-Photon Imager for Nanosecond Astrophysics (SPINA) system</i>. IEEE Transactions on Instrumentation and Measurement, v. 72, October 2023, article number 10285601.</p></a>
-								<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12191/121910Y/Development-of-position-sensitive-photon-counting-imager-for-Ultra-Fast/10.1117/12.2628864.short"><p><b>Lau, A. W. K.</b>, Chan, Y. Y., Shafiee, M., Smoot, G. F., &amp; Grossan, B. (2022). <i>Development of position-sensitive photon-counting imager for Ultra-Fast Astronomy</i>. In X-Ray, Optical, and Infrared Detectors for Astronomy X (Vol. 12191, pp. 312&ndash;329). SPIE.</p></a>
-								<a href="https://www.spiedigitallibrary.org/journals/Journal-of-Astronomical-Telescopes-Instruments-and-Systems/volume-6/issue-4/046002/On-sky-silicon-photomultiplier-detector-performance-measurements-for-millisecond-to/10.1117/1.JATIS.6.4.046002.short"><p><b>Lau, A. W. K.</b>, Shafiee, M., Smoot, G. F., Grossan, B., &amp; Zhanat, M. (2020). <i>On-sky silicon photomultiplier detector performance measurements for millisecond to sub-microsecond optical source variability studies</i>. Journal of Astronomical Telescopes, Instruments, and Systems 6.4 (2020): 046002.</p></a>
-								<h3 class="major">Recent presentation</h3>
-								<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12191/121910Y/Development-of-position-sensitive-photon-counting-imager-for-Ultra-Fast/10.1117/12.2628864.short"><p>Oral Presentation: <b>Development of position-sensitive photon-counting imager for Ultra-Fast Astronomy</b>,<br /> SPIE Astronomical Telescopes + Instrumentation 2022: X-Ray, Optical, and Infrared Detectors for Astronomy X</p></a>
-								<hr />
-								<a href="https://scholar.google.com/citations?hl=en&amp;user=hddv02QAAAAJ" class="special">Google Scholar Profile</a>
-							</div>
-						</div>
-					</section>
+			<article class="project" id="luvcam">
+				<div>
+					<p class="when mono">2023 &ndash; present</p>
+					<h3>sCMOS cameras and LUVCam</h3>
+					<p>Scientific CMOS sensors now reach very low read noise at high frame rates, at a cost that makes arrays of cameras practical. I contributed to characterizing sCMOS detectors for optical astronomy, and I work on the Little UV Camera (LUVCam), a low-cost ultraviolet and optical camera for space. LUVCam1 has flown as a technology demonstration, and LUVCam2 is its successor.</p>
+					<p class="role-line"><strong>My role.</strong> I develop the readout electronics and FPGA firmware for the LUVCam cameras, and supervise student hardware and firmware work.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="https://arxiv.org/abs/2607.28831">LUVCam: A high-performance, low-cost, UV/optical camera for the future of astronomy in space</a> <span class="venue">submitted to JATIS, 2026</span></li>
+						<li><a href="publications.html#luvcam2-spie-2026">The second little ultraviolet camera (LUVCam2) mission</a> <span class="venue">Proc. SPIE, 2026</span></li>
+						<li><a href="https://arxiv.org/abs/2409.16449">Beyond CCDs: characterization of sCMOS detectors for optical astronomy</a> <span class="venue">Proc. SPIE, 2024</span></li>
+					</ul>
+				</div>
+				<figure>
+					<img src="images/luvcam-boards.jpg" alt="A camera sensor board connected by flat cables to an FPGA board on a lab bench" width="1400" height="812" loading="lazy" />
+					<figcaption>A LUVCam sensor board (left) and its FPGA readout board during bench testing.</figcaption>
+				</figure>
+			</article>
+		</div>
+	</section>
 
-					<section id="prev" class="wrapper alt style5">
-						<div class="inner">
-							<h2 class="major">Past Projects</h2>
-							<section class="features">
-								<article>
-									<span class="image"><img src="images/mic.jpg" alt="Scanning confocal luminescence microscope" /></span>
-									<h3 class="major">2D Luminescence Microscopic Imaging System development</h3>
-									<p>I joined Prof. KS Wong's laboratory for my undergraduate final year project. I developed the optics, electronics and firmware of a laser-excited scanning confocal microscope for material characterization. The system is still in use and being upgraded.</p>
-								</article>
-								<article>
-									<span class="image"><img src="images/space_orbit.jpg" alt="Spacecraft orbit reachability plot" /></span>
-									<h3 class="major">Space Orbit Design</h3>
-									<p>This was my first research project during my undergraduate studies, where we developed a fast algorithm for estimating the reachability of low-thrust spacecraft. We built an O(N&middot;k) algorithm, compared to the traditional O(N<sup>k</sup>) cost. The results were presented at the IAC 2017 conference.</p>
-								</article>
-							</section>
-						</div>
-					</section>
+	<!-- ============ Radio + optical ============ -->
+	<section class="section" id="joint">
+		<div class="wrap">
+			<header class="theme-head">
+				<p class="band mono"><span class="dot both"></span>Radio + optical</p>
+				<h2>Observing both at once</h2>
+				<p class="lede">Radio signals are delayed and distorted by the plasma they cross, while optical light arrives almost unaffected. Catching the same event in both gives a clean reference for its timing and energy.</p>
+			</header>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Please feel free to contact me through the following links.</p>
-							<ul class="contact">
-								<li class="icon solid fa-envelope"><a href="mailto:albertkit2000@gmail.com">albertkit2000@gmail.com</a></li>
-								<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/albertwaikit.lau">facebook.com/albertwaikit.lau</a></li>
-								<li class="icon solid fa-university"><a href="https://scholar.google.com/citations?hl=en&amp;user=hddv02QAAAAJ">Google Scholar Page</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>Updated Jan 2024.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+			<article class="project stack" id="iqueye">
+				<div>
+					<p class="when mono">2024 &ndash; present</p>
+					<h3>IQUEYE at Gemini South</h3>
+					<p>IQUEYE, the Italian Quantum Eye, is a single-photon instrument that time-tags individual photons. It was installed as a visitor instrument on the 8.1 m Gemini South telescope for a coordinated pulsar campaign with simultaneous radio coverage. We detected optical pulsations from the Crab pulsar, which validates the timing and provides data for comparing radio and optical pulses.</p>
+					<p class="role-line"><strong>My role.</strong> I took part in installing and commissioning the instrument and led the simultaneous radio observations with the 46 m telescope at the Algonquin Radio Observatory. I also applied the photon-statistics framework from SPINA to the sensitivity and false-alarm analysis.</p>
+					<p class="papers-label mono">Papers</p>
+					<ul class="papers">
+						<li><a href="https://doi.org/10.1117/12.3066537">IQUEYE at Gemini South: instrument, science commission, and first results</a> <span class="venue">Proc. SPIE, 2025</span></li>
+					</ul>
+				</div>
+				<figure>
+					<img src="images/hero-aro.jpg" alt="The Milky Way rising beside the silhouette of a large radio dish" width="2200" height="1027" loading="lazy" />
+					<figcaption>The Milky Way over the 46 m telescope at the Algonquin Radio Observatory, which provided the simultaneous radio observations.</figcaption>
+				</figure>
+			</article>
 
+			<div class="callout">
+				<h3>Where this is going</h3>
+				<p>No prompt optical counterpart to a fast radio burst has yet been confirmed. A prompt flash may be over before a radio alert reaches a follow-up telescope, so the optical data have to be recorded continuously and searched afterwards, using the time and position of the radio burst.</p>
+				<p>My aim is to pair wide-field radio arrays with fast, low-noise sCMOS cameras that watch the same field, bringing the timing, continuous acquisition and calibration methods of radio arrays to optical cameras. A detection would constrain how these bursts are produced. Even a non-detection rules out models that predict brighter flashes.</p>
 			</div>
+		</div>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- ============ Other ============ -->
+	<section class="section" id="other">
+		<div class="wrap">
+			<h2>Other and earlier work</h2>
+			<ul class="plain">
+				<li><strong>Measuring stars with satellite eclipses.</strong> Using eclipses by artificial satellites to measure the angular sizes of stars. <a href="https://arxiv.org/abs/2608.11161">arXiv:2608.11161</a></li>
+				<li><strong>Wok the Hydrogen.</strong> Measuring Galactic neutral hydrogen from a noisy urban environment in Hong Kong, using kitchenware. <a href="https://arxiv.org/abs/2309.15163">arXiv:2309.15163</a></li>
+				<li><strong>Fast radio bursts as a probe of helium reionization.</strong> Constraining the detection uncertainties of HeII reionization with fast radio bursts. <a href="publications.html#heii-newast-2021">New Astronomy, 2021</a></li>
+				<li><strong>MKIDs readout.</strong> Readout systems for microwave kinetic inductance detectors at the Energetic Cosmos Laboratory.</li>
+				<li><strong>Scanning confocal microscope.</strong> Optics, electronics and firmware for a laser-excited luminescence imaging system for material characterization, as my undergraduate final-year project with Prof. K. S. Wong.</li>
+				<li><strong>Low-thrust spacecraft trajectories.</strong> A fast algorithm for estimating the reachable region of low-thrust spacecraft, presented at the 68th International Astronautical Congress in 2017.</li>
+			</ul>
+		</div>
+	</section>
 
-	</body>
+	<!-- ============ Funding ============ -->
+	<section class="section" id="funding">
+		<div class="wrap">
+			<h2>Funding</h2>
+			<table class="table">
+				<thead>
+					<tr><th>Award</th><th class="num">Amount (CAD)</th><th>Period</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>Blue-Sky Idea Grant, Dunlap Institute</td><td class="num">15,000</td><td>Feb 2026</td></tr>
+					<tr><td>Dunlap Seed Fund: Canadian&ndash;Chilean Array for Radio Transient Studies (CHARTS)</td><td class="num">353,000</td><td>2023 &ndash; 2024</td></tr>
+					<tr><td>Dunlap Seed Fund: differential electronics and radio-over-fibre development</td><td class="num">28,500</td><td>2023 &ndash; 2024</td></tr>
+					<tr><td>Dunlap Postdoctoral Fellowship</td><td class="num"></td><td>2023 &ndash; 2028</td></tr>
+				</tbody>
+			</table>
+
+			<h2 style="margin-top: 3rem;">Observatory and site work</h2>
+			<p class="lede" style="margin: .6rem 0 0;">Dominion Radio Astrophysical Observatory &middot; Algonquin Radio Observatory &middot; Hat Creek Observatory &middot; E.C. Carr Astronomical Observatory &middot; Assy-Turgen Observatory</p>
+		</div>
+	</section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+	<div class="wrap">
+		<p><strong>Albert Wai Kit Lau</strong><br />Dunlap Institute for Astronomy and Astrophysics<br />University of Toronto, 50 St. George Street<br />Toronto, ON M5S 3H4, Canada</p>
+		<p><a class="js-email" data-user="awk.lau" data-domain="utoronto.ca">awk.lau<span class="at"></span>utoronto.ca</a></p>
+		<p><a href="https://scholar.google.com/citations?hl=en&amp;user=hddv02QAAAAJ">Google Scholar</a> &middot; <a href="https://orcid.org/0000-0002-2457-3298">ORCID</a> &middot; <a href="https://github.com/awklau">GitHub</a><br /><span class="mono">Updated November 2026</span></p>
+	</div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
 </html>
