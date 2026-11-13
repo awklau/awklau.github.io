@@ -193,6 +193,8 @@ figcaption { font-size: .875rem; color: var(--muted); margin-top: .5rem; line-he
 .figs { display: grid; gap: 1.3rem; }
 .figs.two { grid-template-columns: 1fr 1fr; gap: .8rem; }
 .figs.two img { aspect-ratio: 1; object-fit: cover; }
+/* A 3:2 landscape beside a 3:4 portrait: widths of 2:1 give both the same height */
+.figs.duo { grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; }
 .papers-label { color: var(--muted); text-transform: uppercase; margin: 1.3rem 0 .5rem; }
 .papers { list-style: none; padding: 0; margin: 0; font-size: .9063rem; max-width: 40em; }
 .papers li { padding: .1rem 0 .1rem .9rem; border-left: 2px solid var(--line); margin-bottom: .55rem; line-height: 1.45; }
@@ -254,6 +256,7 @@ figcaption { font-size: .875rem; color: var(--muted); margin-top: .5rem; line-he
 	.cards { grid-template-columns: 1fr; }
 	.split, .about, .project, .cols { grid-template-columns: 1fr; gap: 2.4rem; }
 	.project { gap: 1.6rem; }
+	.figs.duo { grid-template-columns: 1fr; gap: 1.3rem; }
 }
 @media (max-width: 720px) {
 	.site-header .wrap { gap: .4rem 1rem; }
